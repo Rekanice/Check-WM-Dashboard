@@ -1,0 +1,37 @@
+body {
+    background-color: #87d3eb;
+}
+
+.row {
+    background-color:rgba(230, 230, 250, 0);
+    margin-bottom: 1rem;
+}
+.alert .p {
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+}
+.card {
+    min-height: 100%;
+}
+.card-header {
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+}
+.card-body {
+    overflow: auto;
+}
+.heatmap-container{
+    justify-content: center;
+}
+.navbar-brand {
+    justify-content: center;
+}
+button {
+    margin-right: 2%;
+  }
+.card-body {
+    display: flex;
+    justify-content: center;
+}
+
