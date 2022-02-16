@@ -25,25 +25,28 @@ This repository is exclusively for milestone 5. It contains the necessary files 
   .\activate
   cd ..\..
   ```
-
+  
+</br>
 
 4. Install the necesary modules in the virtual environment
  ```
  pip install requirements.txt
  ```
  
+ </br>
  
 5. Install PostgresSQL database application 
 - Install the 13.6 version [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 - Follow the tutorial in these articles for the initial setup of the database. [Windows](https://www.postgresqltutorial.com/install-postgresql/) OR [Linux](https://www.postgresqltutorial.com/install-postgresql-linux/), and then [this](https://www.postgresqltutorial.com/connect-to-postgresql-database/).
 
+</br>
 
 6. In the pgAdmin 4, create a new database called `idle_washer` as shown in the image.
   ![alt text](https://github.com/Rekanice/swe-G2-iot-project/blob/4df836f737839fc081583b6752bc731de4cf2c07/create_pgdb.png)
 
+</br>
 
-
-7. Update the new database uri based on your database credentials. Edit this line of code in `app.py` without the `[ ]` brackets:
+7. Update the new database uri based on your database credentials. Edit this line of code in `app.py` without the `[]` brackets:
   ```
   ENV = 'dev'
   if ENV == 'dev':
@@ -51,6 +54,7 @@ This repository is exclusively for milestone 5. It contains the necessary files 
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:[ur_password_to_postgres_db]@localhost/idle_washer'
   ```
 
+</br>
 
 8. Go to your Flask app terminal and initialize the tables in the database by running the code below. This creates the tables in the idle_washer database. 
  ```
@@ -63,18 +67,19 @@ This repository is exclusively for milestone 5. It contains the necessary files 
  
  ![alt text](https://github.com/Rekanice/swe-G2-iot-project/blob/4df836f737839fc081583b6752bc731de4cf2c07/init_db_tables.png)
  
+</br>
 
 9. Download these csv files for the data for each database table:
   - washing_machine : [washing_machine_db.csv]()
   - sensor_log : [random_sensor_log_db.csv](https://github.com/Rekanice/swe-G2-iot-project/blob/master/random_sensor_log_db.csv)
 
-
+</br>
 
 10. Go to the tables in the postgres database, and right click each table and import the csv data into the table. Follow the settings shown in the image.
   - ![alt text](https://github.com/Rekanice/swe-G2-iot-project/blob/4df836f737839fc081583b6752bc731de4cf2c07/import_csvdata1.png)
   - ![alt text](https://github.com/Rekanice/swe-G2-iot-project/blob/4df836f737839fc081583b6752bc731de4cf2c07/import_csvdata2.png)
 
-
+</br>
 
 11. Go to the Flask app again, and run app.py. Click the link that appears after a moment. You should be able to access the dashboard.
   Navigation Guide:
